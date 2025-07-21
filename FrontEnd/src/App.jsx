@@ -1,16 +1,20 @@
 
-import React from 'react';
+import React, {useState}from 'react';
+import { Routes, Route , Navigate } from 'react-router-dom';
+import SignUp from './userPages/SignUp';
 
 function App() {
   
 
   return (
     <>
-      <div>
       
-        <h1> Hello ReactApp</h1>
-       </div>
-       
+       <Routes>
+
+       <Route path="/"
+        element = {<SignUp/>}
+        />
+       </Routes>
     </>
   )
 }
