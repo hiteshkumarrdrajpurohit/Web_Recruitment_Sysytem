@@ -2,6 +2,9 @@
 import React, {useState}from 'react';
 import { Routes, Route , Navigate } from 'react-router-dom';
 import SignUp from './userPages/SignUp';
+import SignIn from './userPages/SignIn';
+import UserHome from './userPages/UserHome';
+import Home from './Home';
 
 function App() {
   
@@ -11,10 +14,21 @@ function App() {
       
        <Routes>
 
-       <Route path="/"
+        <Route path="/"
+        element={<Home/>}
+        />
+       <Route path="/signUp"
         element = {<SignUp/>}
         />
+        <Route path="/signIn"
+        element = {<SignIn/>}
+        />
+        <Route path="/home"
+          element={<UserHome />}
+        />
        </Routes>
+       
+       
     </>
   )
 }
