@@ -1,4 +1,7 @@
 
+ 
+
+
 import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SignUp from "./userPages/SignUp";
@@ -7,10 +10,14 @@ import SignIn from './userPages/SignIn';
 import UserHome from './userPages/UserHome';
 import Home from './Home';
 
+
 function App() {
   return (
     <>
        <Routes>
+       <Route path="/" element = {<SignUp/>}/>
+          <Route path="/userHome" element={<UserHome />} /> 
+       </Routes>
         <Route path="/"
         element={<Home/>}
         />
@@ -25,6 +32,7 @@ function App() {
           element={<UserHome />}
         />
        </Routes> 
+
     </>
   );
 }
